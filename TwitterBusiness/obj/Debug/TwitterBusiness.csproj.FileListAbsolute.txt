@@ -1,0 +1,12 @@
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\bin\Debug\TwitterBusiness.dll.config
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\bin\Debug\TwitterBusiness.dll
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\bin\Debug\TwitterBusiness.pdb
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\obj\Debug\TwitterBusiness.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\obj\Debug\TwitterBusiness.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\obj\Debug\TwitterBusiness.csproj.CopyComplete
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\obj\Debug\TwitterBusiness.dll
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterBusiness\obj\Debug\TwitterBusiness.pdb

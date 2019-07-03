@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\Assignments\TwitterClone\TwitterBusiness\bin\Release\TwitterRepo.dll.config
+C:\Users\Administrator\Desktop\Assignments\TwitterClone\TwitterBusiness\bin\Release\TwitterRepo.dll
+C:\Users\Administrator\Desktop\Assignments\TwitterClone\TwitterBusiness\bin\Release\TwitterRepo.pdb
+C:\Users\Administrator\Desktop\Assignments\TwitterClone\TwitterBusiness\bin\Release\EntityFramework.dll
+C:\Users\Administrator\Desktop\Assignments\TwitterClone\TwitterBusiness\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\Assignments\TwitterClone\TwitterBusiness\bin\Release\EntityFramework.xml
+C:\Users\Administrator\Desktop\Assignments\TwitterClone\TwitterBusiness\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\Assignments\TwitterClone\TwitterBusiness\obj\Release\TwitterRepo.dll
+C:\Users\Administrator\Desktop\Assignments\TwitterClone\TwitterBusiness\obj\Release\TwitterRepo.pdb

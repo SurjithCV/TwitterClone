@@ -1,0 +1,132 @@
+﻿@model TwitterClone.Models.DashboardModel
+
+@{
+    ViewBag.Title = "Dashboard";
+}
+<div class="container-fluid">
+    @Html.HiddenFor(x => x.LoggedInUserId)
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>             
+                @Html.ActionLink("Twitter", "Dashboard", "Login", new { userid = Model.LoggedInUserId }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Dashboard", "Login", new { userid = Model.LoggedInUserId }, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Profile", "Dashboard", "Login", new { userid = Model.LoggedInUserId }, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Signout", "SignOut", "Login", new { userid = Model.LoggedInUserId }, new { @class = "navbar-brand" })</li>                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4" >
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>@Html.ActionLink("Welcome " + Model.Tweeps.FullName, "Profile", "Login", new { query = Model.LoggedInUserId })</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                         @using (Html.BeginForm("", "", FormMethod.Post, new { @id = "searchPersonForm", @class = "form-horizontal" }))
+                         {
+                            <p>Follow</p>
+                            @Html.TextBox("searchPerson", "", new { @class = "form-control ", placeholder = "Search person" })
+                         }
+                    </div>
+                </div>
+                <hr />
+                <br /><br />
+                <div class="row">
+                    <div class="col-12">
+                        <p>Tweets </p><p>@Model.TweetCount.ToString().Trim()</p>
+                        <p>Following </p><p>@Model.Following.ToString().Trim()</p>
+                        <p>Followers </p><p>@Model.Followers.ToString().Trim()</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="jumbotron">
+                <div class="row border-1">
+                    <div class="col-12">
+                        @using (Html.BeginForm("", "", FormMethod.Post, new { @id = "tweetForm", @class = "form-horizontal" }))
+                        {
+                            <input type="hidden" value="@Model.LoggedInUserId" name="LoggedInUserId" />
+                            <div class="form-group input-group-sm">
+                                <div class="col-auto">
+                                    <h3>What's happening in the world ?</h3>
+                                </div>
+                            </div>
+                            <div class="form-group input-group-sm">
+                                <div class="col-auto">
+                                    @Html.TextAreaFor(m => m.Message, new { @class = "form-control ", placeholder = "Tweet whats happening around!", @rows = 4, @cols = "200", style = "margin: 0px 184.656px 0px 0px; height: 173px; width: 274px;" })
+                                    @Html.ValidationMessageFor(m => m.Message)
+                                </div>
+                            </div>
+                            <div class="form-group input-group-sm">
+                                <div class="col-auto">
+                                    <button class="btn btn-info post-btn" type="button">Post</button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+             
+                <div class="row border-1">
+                    <div id="tweet-results" class="col-12">
+                        <div class="row">
+                            <h3>Tweets</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto">
+                                <table class="table border-0 table-responsive">
+                                    @foreach (var tweet in Model.TweetList)
+                                    {
+                                        <tr>
+                                            <td colspan="1">@tweet.TweetUser</td>
+                                            <td colspan="4">@tweet.TweetMessage</td>
+                                            <td colspan="1">@tweet.TweetTime</td>
+                                        </tr>
+                                    }
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(function () {
+            $(".post-btn").click(function () {
+                debugger;
+                $('#tweetForm').submit();
+            });
+
+            $('#tweetForm').submit(function (event) {
+                var formData = $('#tweetForm').serialize();
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("PostTweet", "Login")',
+                    data: formData
+                }).done(function (data) {
+                        $('#tweet-results').html("");
+                        $('#tweet-results').html(data);
+                    });
+                $('#tweetForm')[0].reset(); 
+                event.preventDefault();
+            });
+
+        });
+    });
+</script>
+

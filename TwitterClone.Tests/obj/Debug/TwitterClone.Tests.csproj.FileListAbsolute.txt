@@ -1,0 +1,1 @@
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MyProjects\TwitterClone\TwitterClone.Tests\obj\Debug\TwitterClone.Tests.csprojResolveAssemblyReference.cache
